@@ -24,10 +24,18 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en">
-      <body
-        className={`${geistSans.variable} ${geistMono.variable} antialiased`}
-      >
-        {children}
+      <body>
+        <header className="p-4 border-b mb-8 bg-gray-100 dis">
+          <h1 className={`${geistSans.variable} font-sans`}>My App</h1>
+        </header>
+        <section className="p-4">
+          {children}
+        </section>
+        <footer className="p-4 border-t mt-8 bg-gray-100 text-center">
+          <p className={`${geistMono.variable} font-mono text-sm`}>
+            &copy; 2025 My App
+          </p>
+        </footer>
       </body>
     </html>
   );
