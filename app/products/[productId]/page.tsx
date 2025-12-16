@@ -1,3 +1,4 @@
+import Link from "next/link";
 
 
 type Props = {
@@ -16,6 +17,10 @@ export default async function products( {
 }: Props)
     {
     const productId = (await params).productId;
-    return <h1>product details {productId} </h1>;
+    return ( <>
+        <h1> <Link href="/">Home</Link></h1>
+        <h1>product details {productId} </h1>
+        </>
+    )
         
 }
